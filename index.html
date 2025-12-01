@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>DAILY TRACKER</title>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Hand&family=Schoolbell&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="edu-qld-hand-unique">DAILY TRACKER</h1>
+        <h4>Daily Activities Tracker!</h4>
+
+        <form id="habit-form" class="form">
+            <input id="habit-input" placeholder="Add a habit (e.g., Read a book)" />
+                <select id="filter">
+                    <option value="all">All</option>
+                    <option value="done">Completed</option>
+                    <option value="notdone">Not Completed</option>
+                </select>
+
+            <button type="submit">Add</button>
+        </form>
+    
+
+        <div id="stats" class="stats"></div>
+        <button id="reset-Btn" type="button"class="form button danger">Clear Today</button>
+        <small class="hint">Tip: Double-click "Clear Today" to clear all habits</small>
+        <ul id="habit-list" class="list"></ul>
+    </div>
+
+    <script src="trial.js"></script>
+</body>
+</html>

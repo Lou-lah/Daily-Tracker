@@ -1,0 +1,214 @@
+:root{
+    --bg:#1b212e;
+    --card:#4b5979;
+    --text:#f3f6fb;
+    --accent:#072669;
+    --danger:#cf0808;
+    --muted:#cddf93;
+}
+
+*{box-sizing:border-box}
+
+.edu-qld-hand-unique {
+    font-family: "Edu QLD Hand", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+h1{
+    font-size:30px;
+    margin:0 0 12px;
+}
+
+h4 {
+    font-family: "Schoolbell", "Edu QLD Hand", cursive, sans-serif;
+    font-weight: 500; 
+    font-size: 18px;
+    font-style: normal;
+}
+
+
+body {
+    font-family: "Quicksand", "Nunito", ui-sans-serif, system-ui, -apple-system,
+                "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.container{
+    width:100%;
+    max-width:720px;
+    background:var(--card);
+    border-radius:10px;
+    padding:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+
+.form {
+    display:flex;
+    gap:8px;
+    margin-bottom:12px;
+    align-items: center;
+    flex-wrap: wrapS;
+}
+
+.form input {
+    flex:1;
+    padding:8px;
+    border:1px solid #d1d5db;
+    border-radius:6px;
+}
+
+.form select {
+    padding:6px ;
+    border-radius:6px;
+}
+
+.form button {
+    font-family: inherit;
+    font-size: 14px;
+    background:var(--accent);
+    color:#fff;
+    border:none;
+    padding:8px 12px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.stats {
+    color:var(--muted);
+    margin-bottom:12px;
+    font-size:13px;
+}
+
+.list {
+    list-style:none;
+    padding:0;
+    margin-top: 10px;
+    display:flex;
+    flex-direction:column;
+    gap:8px}
+
+.list li {
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding:10px;
+    border:1px solid #e5e7eb;
+    border-radius:6px;
+    gap: 10px;
+}
+
+.list li .left {
+    display: flex;
+    gap: 4px;               /* spacing between name and meta */
+    flex: 1;                /* take all available horizontal space */
+}
+
+
+.list li:hover { 
+    transform: translateY(-2px); 
+    transition: transform .12s ease; 
+}
+
+.list .left{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.list .left input[type="checkbox"]{
+    width:14px;
+    height:14px;
+    cursor:pointer;
+    accent-color: var(--accent);
+}
+
+
+.list .left .name{
+    color: var(--text);
+    font-size:15px;
+    color:#111827;
+    font-weight:500;
+}
+
+/* completed state */
+.list .left .name.done{
+    text-decoration:line-through;
+    color:#9ca3af;
+    font-weight:400;
+}
+
+/*edit button*/
+.edit-btn {
+    background: none;
+    border: none;
+    color: #002c8a;
+    cursor: pointer;
+    padding: 6px;
+}
+
+
+/* delete button */
+.list button.delete{
+    background:none;
+    border:none;
+    color:var(--danger);
+    cursor:pointer;
+    padding:6px;
+    font-size:13px;
+    border-radius:4px;
+    transition:background-color .12s ease;
+}
+
+/* empty state */
+.empty{
+    text-align:center;
+    color:var(--muted);
+    padding:18px;
+    border:1px dashed #e6e9ee;
+    border-radius:6px;
+    background:#fbfdff;
+}
+
+.hint {
+    display: block;
+    font-size: 10px;
+    color: #a7a7a7;
+    font-style: italic;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#reset-Btn {
+    background: var(--danger);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 4px;
+}
+#reset-Btn:hover {
+    background: #b91c1c;
+}
+
+
+/* responsive tweaks */
+@media (max-width:520px){
+    .container{ padding:16px; }
+    h1{ font-size:18px; }
+    .form button{ padding:8px 10px; }
+    .list .left .name{ font-size:14px; }
+}
+
+/* utility helpers */
+.text-muted{ color:var(--muted); font-size:13px; }
+.center{ text-align:center; }
