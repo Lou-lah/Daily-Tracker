@@ -1,24 +1,26 @@
 :root{
-    --bg:#1b212e;
-    --card:#4b5979;
-    --text:#f3f6fb;
-    --accent:#072669;
+    --bg:#1c2333;
+    --card:#3f4a65;
+    --text:#eceff4;
+    --accent:#1a3a8b;
     --danger:#cf0808;
-    --muted:#cddf93;
+    --muted:#a0aec0;
 }
 
-*{box-sizing:border-box}
+*{box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
 
 .edu-qld-hand-unique {
     font-family: "Edu QLD Hand", cursive;
-    font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
 }
 
 h1{
     font-size:30px;
-    margin:0 0 12px;
+    margin-bottom:12px;
 }
 
 h4 {
@@ -28,6 +30,9 @@ h4 {
     font-style: normal;
 }
 
+h1, h4 {
+    margin: 0;
+}
 
 body {
     font-family: "Quicksand", "Nunito", ui-sans-serif, system-ui, -apple-system,
@@ -52,11 +57,12 @@ body {
 
 
 .form {
-    display:flex;
-    gap:8px;
-    margin-bottom:12px;
+    display: flex;
+    gap: 6px;
+    margin-top: 10px;
+    margin-bottom: 12px;
     align-items: center;
-    flex-wrap: wrapS;
+    flex-wrap: wrap;
 }
 
 .form input {
@@ -69,6 +75,7 @@ body {
 .form select {
     padding:6px ;
     border-radius:6px;
+    min-width: 120px;
 }
 
 .form button {
@@ -80,6 +87,7 @@ body {
     padding:8px 12px;
     border-radius:6px;
     cursor:pointer;
+    min-height: 40px;
 }
 
 .stats {
@@ -88,13 +96,15 @@ body {
     font-size:13px;
 }
 
+/*habit*/
 .list {
     list-style:none;
     padding:0;
     margin-top: 10px;
     display:flex;
     flex-direction:column;
-    gap:8px}
+    gap:8px
+}
 
 .list li {
     display:flex;
@@ -108,8 +118,8 @@ body {
 
 .list li .left {
     display: flex;
-    gap: 4px;               /* spacing between name and meta */
-    flex: 1;                /* take all available horizontal space */
+    gap: 4px;               
+    flex: 1;                
 }
 
 
@@ -125,8 +135,8 @@ body {
 }
 
 .list .left input[type="checkbox"]{
-    width:14px;
-    height:14px;
+    width:18px;
+    height:18px;
     cursor:pointer;
     accent-color: var(--accent);
 }
@@ -186,7 +196,7 @@ body {
     text-align: left;
     margin-bottom: 10px;
 }
-
+/*butt reset*/
 #reset-Btn {
     background: var(--danger);
     color: #fff;
@@ -204,9 +214,16 @@ body {
 /* responsive tweaks */
 @media (max-width:520px){
     .container{ padding:16px; }
-    h1{ font-size:18px; }
+    h1{ font-size: 22px; }
+    h4{ font-size: 14px;}
     .form button{ padding:8px 10px; }
     .list .left .name{ font-size:14px; }
+}
+
+@media (max-width:360px){
+    .form input{ min-width:100px; }
+    .form select{ min-width:90px; }
+    .form button{ padding:6px 10px; font-size:13px; }
 }
 
 /* utility helpers */
