@@ -1,10 +1,8 @@
-
-// DATA
-
+/*DATA*/
 let habits = []; 
-// each habit looks like: { id, name, done }
 
-// DOM elements
+/* each habit looks like: { id, name, done }  DOM elements*/
+
 const form     = document.getElementById("habit-form");
 const input    = document.getElementById("habit-input");
 const list     = document.getElementById("habit-list");
@@ -13,7 +11,7 @@ const filterEl = document.getElementById("filter");
 const resetBtn = document.getElementById("reset-Btn");
 
 
-/* LOAD SAVED HABITS */
+/* saved habits */
 
 const saved = localStorage.getItem("habits");
 if (saved) {
